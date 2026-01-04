@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 const LOGO_MIGUEL = "https://static-cdn.jtvnw.net/jtv_user_pictures/bbba27fa-5c14-46cd-bbc9-b3ce19bcda41-profile_image-70x70.png";
 const HERACROSS_SPRITE = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/214.gif";
 
-export default function MiguelEliteUltra() {
+export default function MiguelMinimalistRefined() {
   const [showHit, setShowHit] = useState(false);
   const [hitName, setHitName] = useState("");
 
@@ -16,101 +16,103 @@ export default function MiguelEliteUltra() {
   };
 
   return (
-    /* O contentor agora tem tamanho fixo de 1920x1080 para casar com o OBS */
-    /* Usamos 'relative' em vez de 'fixed inset-0' para o OBS não esticar o conteúdo */
     <div className="w-[1920px] h-[1080px] bg-transparent font-sans text-white pointer-events-none select-none relative overflow-hidden mx-auto">
       
-      {/* --- 1. TICKER SUPERIOR --- */}
-      <div className="w-full bg-black/85 backdrop-blur-2xl border-b border-yellow-500/40 h-10 flex items-center shadow-2xl absolute top-0 left-0 z-50">
-        <div className="bg-yellow-500 text-black px-10 h-full flex items-center font-black italic skew-x-[-25deg] -ml-6 z-20 shadow-[8px_0_20px_rgba(234,179,8,0.5)]">
-          <span className="skew-x-[25deg] text-xs tracking-tighter uppercase">MiguelTCG Breaks</span>
+      {/* --- 1. TICKER SUPERIOR (Refinado) --- */}
+      <div className="w-full bg-black/95 h-9 flex items-center absolute top-0 left-0 z-50 border-b-2 border-yellow-600/30 shadow-2xl">
+        <div className="bg-gradient-to-r from-yellow-700 to-yellow-500 text-black px-8 h-full flex items-center font-black italic shadow-[5px_0_15px_rgba(0,0,0,0.5)]">
+          <span className="text-xs tracking-[0.3em] uppercase">MIGUELTCG</span>
         </div>
-        <div className="animate-marquee whitespace-nowrap text-[11px] font-black uppercase tracking-[0.25em] text-white/80">
-          !! LOJA ABERTA !! PRODUTO SELADO - !TBMJ !! MELHORES BINDERS - !UP !! SIGAM O INSTAGRAM @MIGUELTCGBREAKS !! 
-          <span className="mx-12 text-yellow-500">MIGUELTCGBREAKS</span>
-          !! LOJA ABERTA !! PRODUTO SELADO - !TBMJ !!
-        </div>
-      </div>
-
-      {/* --- 2. BRANDING & HERACROSS --- */}
-      <div className="absolute left-8 top-20 flex items-start gap-5 z-40">
-        <div className="flex items-center gap-4 bg-zinc-900/70 backdrop-blur-2xl p-3 rounded-[2rem] border border-white/10 shadow-2xl relative">
-          <div className="relative">
-            <img src={LOGO_MIGUEL} className="w-14 h-14 rounded-2xl border-2 border-yellow-500/50 shadow-[0_0_25px_rgba(234,179,8,0.4)]" alt="Logo" />
-            <div className="absolute -top-1 -right-1 flex h-4 w-4">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-4 w-4 bg-red-600 border-2 border-zinc-900"></span>
-            </div>
-          </div>
-          <div className="pr-4">
-            <div className="flex items-center gap-2 mb-1">
-                <span className="text-[10px] font-black text-red-500 italic uppercase">Live</span>
-                <span className="text-[10px] font-bold text-zinc-500 uppercase tracking-widest">Bingo</span>
-            </div>
-            <p className="text-2xl font-black italic uppercase tracking-tighter leading-none">MIGUELTCG</p>
-          </div>
-        </div>
-
-        <div className="relative mt-2 group">
-            <div className="absolute inset-0 bg-blue-500/20 blur-2xl rounded-full opacity-50"></div>
-            <img src={HERACROSS_SPRITE} className="w-16 h-16 object-contain drop-shadow-[0_0_15px_rgba(59,130,246,0.7)]" alt="Heracross" />
+        <div className="animate-marquee whitespace-nowrap text-[11px] font-black uppercase tracking-[0.6em] text-zinc-300/90 flex items-center">
+          <span className="mx-4">!! LOJA ABERTA !!</span>
+          <span className="text-yellow-600">!TBMJ</span>
+          <span className="mx-4">!!</span>
+          <span className="text-yellow-600">!UP</span>
+          <span className="mx-4">!! @MIGUELTCGBREAKS !! WWW.MIGUELTCGBREAKS.PT !!</span>
         </div>
       </div>
 
-      {/* --- 3. PAINEL DIREITO --- */}
-      <div className="absolute right-8 top-20 flex flex-col gap-6 w-80 z-40">
-        <div className="bg-white/5 backdrop-blur-3xl border border-white/10 rounded-[1.5rem] shadow-2xl overflow-hidden">
-          <div className="bg-yellow-500/10 px-4 py-2 border-b border-white/10 flex justify-between items-center">
-            <span className="text-[10px] font-black uppercase tracking-widest text-yellow-500">Queue: 39</span>
-            <span className="text-[8px] font-bold text-zinc-500 uppercase">Fila Ativa</span>
-          </div>
-          <div className="p-4 bg-gradient-to-br from-transparent to-black/20">
-            <p className="text-sm font-black uppercase tracking-tight truncate flex items-center gap-2 text-zinc-100">
-               #72535 - Fernando M. <span className="text-yellow-500/60 text-[10px] font-normal italic">(!UP)</span>
-            </p>
-          </div>
+      {/* --- 2. ÁREA DO PAPEL (Criativo & Minimalista) --- */}
+      <div className="absolute left-0 top-[25%] h-[350px] w-[2px] bg-gradient-to-b from-transparent via-yellow-600 to-transparent">
+        <div className="absolute top-0 left-0 w-12 h-[2px] bg-yellow-600 shadow-[0_0_10px_rgba(202,138,4,0.5)]"></div>
+        <div className="absolute bottom-0 left-0 w-12 h-[2px] bg-yellow-600 shadow-[0_0_10px_rgba(202,138,4,0.5)]"></div>
+        <div className="absolute left-4 top-1/2 -translate-y-1/2 -rotate-90">
+            <span className="text-[10px] font-black tracking-[1.2em] text-yellow-600/20 uppercase whitespace-nowrap">Order ID Placement</span>
         </div>
+      </div>
 
+      {/* --- 3. BRANDING (Topo Direita - Mais Premium) --- */}
+      <div className="absolute right-12 top-20 flex items-center gap-5">
+        <div className="text-right border-r-2 border-yellow-600/40 pr-5">
+            <p className="text-[11px] font-black text-yellow-600 tracking-[0.4em] uppercase mb-1">Live Official</p>
+            <h1 className="text-4xl font-black italic tracking-tighter uppercase leading-none drop-shadow-lg">MIGUELTCG</h1>
+        </div>
         <div className="relative group">
-          <div className="absolute -inset-0.5 bg-gradient-to-br from-yellow-500/40 via-zinc-800 to-yellow-600/40 rounded-[1.6rem] blur opacity-40"></div>
-          <div className="relative w-full aspect-video bg-black/60 backdrop-blur-2xl border border-white/10 rounded-[1.5rem] shadow-2xl overflow-hidden flex items-center justify-center">
-             <span className="text-[10px] font-black uppercase text-white/10 tracking-[0.5em]">Webcam Slot</span>
-          </div>
-          <div className="absolute -bottom-2 right-6 bg-yellow-500 text-black px-4 py-0.5 rounded-md text-[9px] font-black uppercase italic tracking-tighter shadow-xl">
-            Stream Cam
-          </div>
+            <div className="absolute -inset-1 bg-yellow-600/20 rounded-full blur opacity-0 group-hover:opacity-100 transition duration-500"></div>
+            <img src={LOGO_MIGUEL} className="w-20 h-20 rounded-full border-2 border-yellow-600/60 p-1.5 bg-zinc-950 shadow-2xl relative" alt="Logo" />
+            <div className="absolute top-1 right-1 w-5 h-5 bg-red-600 rounded-full border-4 border-zinc-950 animate-pulse"></div>
         </div>
       </div>
 
-      {/* --- 4. ALERTA DE HIT --- */}
+      {/* --- 4. FILA E WEBCAM (Layout Clean) --- */}
+      <div className="absolute right-12 bottom-16 flex flex-col gap-10 w-80">
+        {/* Queue */}
+        <div className="relative pl-6 py-1">
+            <div className="absolute left-0 top-0 w-1 h-full bg-yellow-600"></div>
+            <p className="text-[10px] font-black text-yellow-600/60 uppercase tracking-[0.3em] mb-1">Coming Up Next</p>
+            <p className="text-2xl font-black uppercase tracking-tight italic text-white drop-shadow-md">#3. Ricardo Monteiro</p>
+        </div>
+
+        {/* Webcam Frame */}
+        <div className="relative">
+            {/* Cantos Estilizados */}
+            <div className="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-yellow-600/70"></div>
+            <div className="absolute -bottom-3 -right-3 w-6 h-6 border-b-2 border-r-2 border-yellow-600/70"></div>
+            
+            <div className="w-full aspect-video bg-zinc-950/80 border border-white/10 rounded-sm backdrop-blur-md overflow-hidden flex items-center justify-center">
+                 <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10"></div>
+                 <span className="text-[10px] font-black uppercase tracking-[1.5em] text-white/5 italic">Visual Stream</span>
+            </div>
+            <div className="absolute -bottom-2 left-6 bg-yellow-600 text-black px-3 py-0.5 text-[9px] font-black uppercase italic">
+              Cam 01
+            </div>
+        </div>
+      </div>
+
+      {/* --- 5. HERACROSS (Assinatura Subtil) --- */}
+      <div className="absolute bottom-16 left-16 group">
+         <img src={HERACROSS_SPRITE} className="w-24 h-24 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] transition-transform duration-500 group-hover:scale-110" />
+      </div>
+
+      {/* --- 6. MEGA HIT (Design de Impacto) --- */}
       {showHit && (
-        <div className="absolute inset-0 flex items-center justify-center z-[100] animate-in fade-in zoom-in duration-300">
-           <div className="bg-black/95 p-1 rounded-2xl shadow-[0_0_120px_rgba(234,179,8,0.5)] border border-yellow-500/40 backdrop-blur-3xl">
-              <div className="bg-gradient-to-b from-zinc-900 to-black px-16 py-8 rounded-xl flex flex-col items-center">
-                 <div className="flex items-center gap-6 mb-2">
-                    <img src={HERACROSS_SPRITE} className="w-14 h-14 -scale-x-100" />
-                    <span className="text-yellow-500 font-black text-4xl uppercase italic tracking-widest">MEGA HIT!</span>
-                    <img src={HERACROSS_SPRITE} className="w-14 h-14" />
-                 </div>
-                 <p className="text-white text-5xl font-black uppercase tracking-tighter">{hitName}</p>
-                 <div className="w-full h-1 bg-yellow-500 mt-6 animate-grow"></div>
+        <div className="absolute inset-0 flex items-center justify-center z-[100] animate-in fade-in zoom-in duration-500 backdrop-blur-xl">
+           <div className="relative">
+              <div className="absolute -inset-20 bg-yellow-600/10 blur-[100px] rounded-full animate-pulse"></div>
+              <div className="text-center relative">
+                <span className="text-yellow-600 font-black text-xs uppercase tracking-[1.5em] mb-6 block drop-shadow-2xl">Elite Pull Detected</span>
+                <h2 className="text-9xl font-black uppercase italic tracking-tighter text-white drop-shadow-[0_10px_50px_rgba(0,0,0,0.5)] border-y-4 border-yellow-600/20 py-4">{hitName}</h2>
+                <div className="w-64 h-1 bg-gradient-to-r from-transparent via-yellow-600 to-transparent mx-auto mt-10 animate-grow"></div>
               </div>
            </div>
         </div>
       )}
 
-      {/* --- 5. RODAPÉ LOJA --- */}
-      <div className="absolute bottom-10 left-10 z-40">
-        <div className="relative bg-black/80 backdrop-blur-xl border border-yellow-500/50 text-yellow-500 px-10 py-4 rounded-xl shadow-2xl">
-           <span className="text-3xl font-black italic uppercase tracking-tighter leading-none block">Loja Aberta</span>
-           <div className="h-[2px] w-12 bg-yellow-500/40 my-1"></div>
-           <span className="text-[10px] font-bold text-white/50 uppercase tracking-[0.4em]">migueltcgbreaks.pt</span>
-        </div>
+      {/* --- 7. FOOTER REFINADO --- */}
+      <div className="absolute bottom-6 w-full flex justify-center gap-16 border-t border-white/5 pt-4 bg-gradient-to-t from-black/20 to-transparent">
+          <div className="flex items-center gap-4 group">
+              <span className="w-2 h-2 bg-yellow-600 rotate-45"></span>
+              <span className="text-[11px] font-black text-white/40 tracking-[0.2em] uppercase group-hover:text-yellow-600 transition-colors">WWW.MIGUELTCGBREAKS.PT</span>
+          </div>
+          <div className="flex items-center gap-4 group">
+              <span className="w-2 h-2 bg-yellow-600 rotate-45"></span>
+              <span className="text-[11px] font-black text-white/40 tracking-[0.2em] uppercase group-hover:text-yellow-600 transition-colors">@MIGUELTCGBREAKS</span>
+          </div>
       </div>
 
       <style jsx>{`
         @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .animate-marquee { animation: marquee 35s linear infinite; }
+        .animate-marquee { animation: marquee 45s linear infinite; }
         @keyframes grow { from { width: 0%; } to { width: 100%; } }
         .animate-grow { animation: grow 5s linear forwards; }
       `}</style>
